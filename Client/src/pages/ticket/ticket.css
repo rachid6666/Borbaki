@@ -1,0 +1,99 @@
+/* ticket.css */
+.ticket-page {
+  /* Thêm margin và padding để tạo khoảng cách */
+  margin: 20px;
+  padding: 20px;
+  /* Đặt background color */
+  background-color: #f8f8f8;
+  /* Đặt border radius và border để tạo viền */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse; /* Gộp các viền của các ô */
+  margin-top: 20px; /* Khoảng cách từ top */
+  padding-bottom: 30px;
+}
+
+.ticket-table th,
+.ticket-table td {
+  border: 1px solid #ccc; /* Viền của header và dữ liệu */
+  padding: 8px; /* Khoảng cách bên trong ô */
+  text-align: left; /* Canh lề trái cho dữ liệu */
+}
+
+.ticket-table th {
+  background-color: #f2f2f2; /* Màu nền cho header */
+  font-weight: bold; /* Đậm chữ của header */
+}
+
+.ticket-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Màu nền cho hàng chẵn */
+}
+
+.ticket-table tr:hover {
+  background-color: #e2e2e2; /* Màu nền khi hover */
+}
+.ticket-page button {
+  /* Định dạng cho nút */
+  padding: 10px 20px;
+  background-color: #007bff; /* Màu nền */
+  color: white; /* Màu chữ */
+  border: none; /* Xóa viền */
+  border-radius: 4px; /* Bo tròn góc */
+  cursor: pointer; /* Chỉ số con trỏ khi di chuột vào */
+  font-size: 16px; /* Kích thước chữ */
+}
+
+.button-ticket{
+  margin-top: 30px
+}
+.ticket-page button:hover {
+  /* Hiệu ứng hover khi di chuột vào */
+  background-color: #0056b3; /* Thay đổi màu nền */
+}
+
+.ticket-page form {
+  /* Tạo định dạng cho form */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Khoảng cách giữa các phần tử con trong form */
+}
+
+.ticket-page h2 {
+  /* Định dạng cho tiêu đề của form */
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.ticket-page label {
+  /* Định dạng cho nhãn label */
+  font-weight: bold;
+}
+
+.ticket-page input[type="text"],
+.ticket-page textarea {
+  /* Định dạng cho input và textarea */
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.ticket-page button[type="submit"] {
+  /* Định dạng cho nút submit */
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.ticket-page button[type="submit"]:hover {
+  /* Hiệu ứng hover khi di chuột vào nút submit */
+  background-color: #0056b3;
+}

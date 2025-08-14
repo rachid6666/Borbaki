@@ -1,0 +1,23 @@
+.sidebar {
+  background-color: white;
+  border-radius: 0px;
+  
+
+}
+
+ul{
+  list-style: none;
+}
+.si-client{
+  padding-bottom: 10px;
+  border-radius: 15px; /* Rounded corners on hover */
+  color: black;
+  transition: 0.3s; 
+  padding: 10px;
+}
+.si-client:hover{
+  background-color: black; 
+  color: white;
+
+}
+

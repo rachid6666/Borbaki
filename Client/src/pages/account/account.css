@@ -1,0 +1,81 @@
+.list{
+    padding: 80px 160px 0;
+}
+.avatar{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.account-page{
+    display: flex;
+    flex-direction: column;
+}
+.user-img{
+    display: flex;
+        
+}
+.listContainer{
+    display: flex;
+    justify-content: space-around; 
+    padding-bottom: 150px
+}
+.footer{
+    width: 100%;
+    width: 1024px;
+    font-size: 12px;
+}
+/* account.css */
+
+/* Style for input fields with class ip-acc */
+.ip-acc {
+    width: 100%;
+    padding: 12px;
+    
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for inputs with class ip-acc */
+  .ip-acc:hover,
+  .ip-acc:focus {
+    border-color: #ffcc00;
+    outline: none;
+  }
+  
+  /* Placeholder style for inputs with class ip-acc */
+  .ip-acc::placeholder {
+    color: #aaa;
+  }
+  
+  /* Focus style for placeholder for inputs with class ip-acc */
+  .ip-acc:focus::placeholder {
+    color: transparent;
+  }
+  
+  /* Style for button with class btn-acc */
+  .btn-acc {
+    padding: 12px 20px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for button with class btn-acc */
+  .btn-acc:hover {
+    background-color: #ffcc00;
+    color:black;
+  }
+  
+  /* Active/focus style for button with class btn-acc */
+  .btn-acc:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #007bff;
+  }
+  

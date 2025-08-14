@@ -1,0 +1,67 @@
+.list{
+
+}
+.listContainer{
+
+}
+.booking-list{
+  
+  max-width: 80%;
+}
+.booking-list h1{
+  padding-bottom:20px;
+}
+.booking-data-grid{
+
+  /* width:  800px; */
+  width: 100svh;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+.booking-data-grid .MuiDataGrid-columnHeaders {
+  background-color: #000000;
+  color: white;
+  font-weight: bold;
+ 
+}
+.booking-data-grid .MuiDataGrid-cell {
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  color: #333;
+}
+.booking-data-grid .MuiDataGrid-cell:last-child {
+  border-right: 1px solid #ccc;
+}
+.booking-data-grid .MuiDataGrid-row {
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.booking-data-grid .MuiDataGrid-row:hover {
+  background-color: #ffcc00;
+}
+.booking-data-grid .MuiDataGrid-virtualScroller {
+  padding-bottom: 10px;
+}
+.booking-data-grid .MuiDataGrid-footerContainer {
+  border-top: 1px solid #ccc;
+  padding: 8px;
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+.booking-data-grid .MuiDataGrid-row.Mui-selected {
+  background-color: #e0e0e0;
+}
+
+.booking-data-grid .MuiDataGrid-row.Mui-selected:hover {
+  background-color: #d0d0d0;
+}
+.booking-data-grid .MuiDataGrid-cell:focus {
+  outline: none;
+  background-color: #e0e0e0;
+}
+.booking-data-grid .MuiDataGrid-cell:focus:hover {
+  background-color: #d0d0d0;
+}

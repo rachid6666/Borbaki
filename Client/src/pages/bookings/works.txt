@@ -1,0 +1,79 @@
+import React, { useState, useContext, useEffect } from "react";
+import "./bookings.css"; 
+import { DataGrid } from "@mui/x-data-grid";
+import { AuthContext } from "../../context/AuthContext";
+import Footer from "../../components/footer/Footer";
+import Navbar from "../../components/navbar/Navbar";
+import Sidebar from "../../components/sidebar/Siderbar";
+import axios from "axios";
+import useFetch from "../../hook/useFetch";
+const Bookings = () => {
+  const { user } = useContext(AuthContext);
+  // const [bookings, setBookings] = useState([]);
+  // New state to indicate loading
+  const { data, loading, error } = useFetch(`/book/${user._id}`); // Use destructuring
+  const [isLoading, setIsLoading] = useState(false); 
+
+  // useEffect(() => {
+  //   const fetchBookings = async () => {
+  //     setIsLoading(true);
+  //     try {
+  //       const response = await axios.get(`/book/${user._id}`);
+  //       setBookings(response.data);
+  //     } catch (error) {
+  //       console.error("Error fetching bookings:", error);
+  //     }finally {
+  //       setIsLoading(false); // Set loading state to false after fetching (success or error)
+  //     }
+  //   };
+
+  //   if (user) {
+  //     fetchBookings();
+  //   }
+  // }, [user]);
+
+  return (
+    <>
+    <Navbar />
+    <div className="list">
+      <div className="listContainer">
+        <Sidebar />
+        <div className="booking-list">
+          <h1>My Bookings</h1>
+          {loading ? ( // Display loading message while fetching data
+            <p>Loading bookings...</p>
+          ) : error ? (
+            <p>Error fetching bookings: {error.message}</p>
+          ): (
+            /* Fixed conditional rendering: */
+            data.length>0 ? (
+              <ul>
+        
+                {data.map((booking) => (
+                  <li key={booking._id}>
+                    <div className="booking-details">
+                      <p>Confirmation ID: {booking._id}</p>
+                      <p>Status: {booking.status}</p>
+                      {/* <p>Hotel: {booking.hotelName}</p> */}
+                      <p>Check-in: {new Date(booking.checkin).toLocaleDateString()}</p>
+                      <p>Check-out: {new Date(booking.checkout).toLocaleDateString()}</p>
+                      <p>Total Price: {booking.totalPrice}€</p>
+                    </div>
+                    {/* Add a button for more details/actions if needed */}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>You don't have any bookings yet.</p>
+            )
+          )}
+        </div>
+      </div>
+      <div className="footer">
+        <Footer />
+      </div>
+    </div>
+  </>);
+};
+
+export default Bookings;

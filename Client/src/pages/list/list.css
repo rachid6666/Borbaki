@@ -1,0 +1,169 @@
+.watting {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+  position: absolute;
+  /* z-index: 999; */
+}
+
+.listContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+}
+
+.lsTitle {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.lsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.lsItem>label {
+  font-size: 12px;
+}
+
+.lsItem>input {
+  height: 30px;
+  border: none;
+  padding: 5px;
+}
+
+.lsItem>span {
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+
+.lsOptionItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 12px;
+}
+
+
+
+
+
+
+.listContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+}
+
+.listWrapper {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  gap: 20px;
+}
+
+.listSearch {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  top: 10px;
+  margin-top: 20px;
+  /* Adjusted margin */
+
+  position: sticky;
+  height: max-content;
+  top: 90px;
+}
+
+
+
+
+.lsOptions {
+  padding: 10px;
+}
+
+.lsOptionItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 12px;
+}
+
+.lsOptionInput {
+  width: 50px;
+}
+
+.listSearch>button {
+  padding: 10px;
+  background-color: #313131;
+  color: white;
+  border: none;
+  width: 100%;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.listSearch>button:hover {
+  background-color: #000000;
+}
+
+.listResult {
+  flex: 3;
+  margin-top: 20px;
+
+}
+
+.desName {
+  font-weight: bolder;
+
+  font-size: 2rem;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+  background:
+    var(--_g) 0% 50%,
+    var(--_g) 50% 50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 50%;
+  animation: l3 1s infinite linear;
+}
+
+@keyframes l3 {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%
+  }
+
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%
+  }
+
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%
+  }
+
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%
+  }
+}

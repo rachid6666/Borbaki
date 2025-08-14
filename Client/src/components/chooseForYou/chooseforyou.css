@@ -1,0 +1,102 @@
+.fp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  .fpItem {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .fpImg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .fpName {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+  
+  .fpCity {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .fpPrice {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f2b203;
+  }
+  
+  .fpRating {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .fpRating button {
+    background-color: #f2b203;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+  
+  .fpRating span {
+    font-size: 14px;
+    color: #777;
+  }
+
+  
+
+.watting {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+  position: absolute;
+}
+
+
+
+.loader {
+  width: 60px;
+  /* margin: auto; */
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+  background:
+    var(--_g) 0% 50%,
+    var(--_g) 50% 50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 50%;
+  animation: l3 1s infinite linear;
+}
+
+@keyframes l3 {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%
+  }
+
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%
+  }
+
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%
+  }
+
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%
+  }
+}

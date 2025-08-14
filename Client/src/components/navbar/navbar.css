@@ -1,0 +1,162 @@
+.navbar{
+  height: 50px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.347);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  
+
+}
+
+.navContainer{
+  width: 100%;
+  max-width: 1024px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.logo{
+  font-weight: 500;
+  font-size: 32px;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+.logo:hover{
+  color:#ffcc00 ;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navButton{
+  margin-left: 20px;
+  border-radius: 15px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #000000;
+  width: 100px;
+  transition: background-color 0.3s ease-in-out;
+}
+.navButton:hover{
+  background-color: #ffcc00;
+  color: black;
+}
+
+.user-nav{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+ 
+}
+.user-nav:hover{
+  color: #f2b203;
+  
+}
+
+.no-underline {
+  text-decoration: none;
+}
+.navButtonLogin{
+  margin-left: 20px;
+  border-radius: 15px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: black;
+  
+  font-size: large;
+  width: 100px;
+  transition: background-color 0.3s ease-in-out;
+
+}
+.navButtonLogin:hover{
+
+background-color: #f2b203;
+
+}
+.navItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin-left:8%;
+}
+.navItems-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+}
+
+.navButtonCarRental-link,
+.navButtonRestaurant-link {
+  margin: 0 5px;
+}
+.navButtonCarRental,.navButtonRestaurant,.navButtonHome
+{font-weight: 600;}
+.navButtonCarRental{
+  font-weight: 600;
+  border-radius: 15px;
+  border: none;
+  margin: 2px 2px 2px 2px ;
+  cursor: pointer;
+  color: #000000;
+  background-color: rgb(255, 255, 255);
+  
+  font-size: large;
+ 
+  transition: background-color 0.3s ease-in-out;
+  padding: 5px 10px 5px 10px ;
+}
+.navButtonCarRental:hover{
+
+  background-color: #4e4e4e65;
+  
+  }
+.navButtonRestaurant{
+  padding: 5px 10px 5px 10px ;
+  border-radius: 15px;
+  border: none;
+ 
+  cursor: pointer;
+  color: #000000;
+  background-color: rgb(255, 255, 255);
+  
+  font-size: large;
+  
+  transition: background-color 0.3s ease-in-out;
+  
+}
+.navButtonRestaurant:hover{
+
+  background-color: #4e4e4e65;
+
+  
+  }
+
+
+  .navButtonHome{
+    border-radius: 15px;
+    border: none;
+    padding: 5px 10px 5px 10px ;
+    cursor: pointer;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    
+    font-size: large;
+    
+    transition: background-color 0.3s ease-in-out;
+    
+  }
+  .navButtonHome:hover{
+    
+  background-color: #4e4e4e65;
+
+  }

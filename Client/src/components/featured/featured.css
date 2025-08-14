@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=MetropolisNF:wght@400&display=swap');
+
+
+.featured{
+  width: 100%;
+  max-width: 1024px;
+  display:block ;
+  justify-content: space-around;
+  gap: 20px;
+  z-index: 1;
+
+}
+
+.featuredItem{
+  margin: 20px;
+  padding: 10px;
+  
+  position: relative;
+  display:  flex;
+
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 300px;
+  flex:1;
+  width: 500px;
+  align-items: center; 
+  justify-content: flex-start; 
+    justify-content: center;  
+    justify-content: flex-end;  
+    width: 100%;
+    max-width: 1024px;
+    
+
+}
+.featuredItem2{
+  margin: 20px;
+  padding: 10px;
+  
+  position: relative;
+  display:  flex;
+
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 300px;
+  flex:1;
+  width: 500px;
+  align-items: center; 
+  justify-content: flex-start; 
+    justify-content: center;   
+    justify-content: flex-end;  
+    width: 100%;
+    max-width: 1024px;
+   
+
+}
+.featuredItem3{
+
+  margin: 20px;
+  padding: 10px;
+  
+  position: relative;
+  display:  flex;
+
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 300px;
+  flex:1;
+  width: 500px;
+  align-items: center; 
+  justify-content: flex-start; 
+    justify-content: center;   
+    justify-content: flex-end;  
+    width: 100%;
+    max-width: 1024px;
+    
+}
+.featuredTitles2{
+  
+  position: absolute;
+  bottom: 20px;
+  left: 200px;
+ 
+ 
+}
+.titleOran{
+  position: absolute;
+  color: rgb(255, 255, 255);
+  left:  850px;
+  width: 200px;
+  top: 160px;
+  
+ 
+}
+.featuredImg2{
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  float: right;
+  width: 70%; 
+
+  object-fit: cover;
+}
+
+.featuredImg{
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  float: left;
+  width: 50%; 
+  height: auto; 
+  object-fit: cover;
+}
+.featuredImg3{
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  float: left;
+  width: 80%; 
+ 
+  object-fit: cover;
+}
+.featuredTitles{
+  position: absolute;
+  bottom: 20px;
+  left: 150px;
+ 
+}
+.featuredTitles2{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+ 
+}
+.featuredTitles3{
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+color: rgb(255, 255, 255);
+}
+.paragprah1{
+ 
+  color: black;
+   font-family: 'MetropolisNF', sans-serif;
+  font-weight: 300;
+padding-left: 10px;
+width: 400px;
+
+
+}
+.paragprah1 h1{
+  font-weight: 800;
+  font-size: 48;
+}
+.paragprah1 h2{
+  font-weight: 400;
+}
+
+.paragprah2{
+      color: black;
+      font-family: 'MetropolisNF', sans-serif;
+      font-weight: 300;
+    padding-left: 10px;
+    width: 250px;
+    
+}
+
+.watting {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+  position: absolute;
+}
+
+
+
+.loader {
+  width: 60px;
+  /* margin: auto; */
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+  background:
+    var(--_g) 0% 50%,
+    var(--_g) 50% 50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 50%;
+  animation: l3 1s infinite linear;
+}
+
+@keyframes l3 {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%
+  }
+
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%
+  }
+
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%
+  }
+
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%
+  }
+}

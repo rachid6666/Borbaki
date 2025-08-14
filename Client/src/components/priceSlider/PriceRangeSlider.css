@@ -1,0 +1,60 @@
+.price-range-slider {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    z-index: 999;
+  }
+  
+  .price-range-slider p {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .slider {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top:20px
+  }
+  
+  .slider-track {
+    cursor: pointer;
+
+  }
+  
+  .slider-thumb {
+    cursor: grab;
+    position: relative;
+    z-index: 5;
+    top: -7px;
+    
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .price-values {
+    display: flex;
+    justify-content: space-between;
+  }
+  .horizontal-slider {
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .example-thumb {
+    width: 30px;
+    height: 30px;
+    background-color: #4e4e4e;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    top:-12px;
+    border: #a78200;
+  }
+  
+  .example-track {
+    background-color: #f6c100;
+    height: 2px;
+    border-radius: 5px;
+  }
