@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import "./login.css";
 import Navbar from "../../components/navbar/Navbar";
-const API_URL = process.env.REACT_APP_API_URL || "https://borbaki.onrender.com";
+import api from "../config";
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
@@ -34,7 +34,8 @@ const Login = () => {
     dispatch({ type: "LOGIN_START" });
     try {
       
-      const res = await axios.post(`${API_URL}/api/auth/login`, credentials);
+      const res = await api.post("/auth/login", credentials);
+     
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
       navigate("/")
     } catch (err) {
