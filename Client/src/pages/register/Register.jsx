@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./register.css";
 import countries from "../../countries";
 import Navbar from "../../components/navbar/Navbar";
-import api from "../config";
+import api from "../../config";
 
 const Signup = () => {
   const { loading, error, dispatch } = useContext(AuthContext);
