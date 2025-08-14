@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import "./login.css";
 import Navbar from "../../components/navbar/Navbar";
-import api from "../config";
+import api from "../../config";
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
