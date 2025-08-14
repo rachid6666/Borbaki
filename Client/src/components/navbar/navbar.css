@@ -1,4 +1,5 @@
-.navbar{
+/* Base Navbar */
+.navbar {
   height: 50px;
   background-color: #ffffff;
   display: flex;
@@ -7,156 +8,133 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  
-
 }
 
-.navContainer{
+.navContainer {
   width: 100%;
   max-width: 1024px;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  padding: 0 10px;
 }
 
-.logo{
-  font-weight: 500;
-  font-size: 32px;
+.logo {
   font-weight: bolder;
+  font-size: 32px;
   color: rgb(0, 0, 0);
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.logo:hover{
-  color:#ffcc00 ;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.navButton{
-  margin-left: 20px;
-  border-radius: 15px;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  color: #000000;
-  width: 100px;
-  transition: background-color 0.3s ease-in-out;
-}
-.navButton:hover{
-  background-color: #ffcc00;
-  color: black;
+.logo:hover {
+  color: #ffcc00;
+  transition: color 0.3s ease-in-out;
 }
 
-.user-nav{
-  text-decoration: none;
-  color: rgb(0, 0, 0);
- 
-}
-.user-nav:hover{
-  color: #f2b203;
-  
-}
-
-.no-underline {
-  text-decoration: none;
-}
-.navButtonLogin{
-  margin-left: 20px;
-  border-radius: 15px;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  color: #ffffff;
-  background-color: black;
-  
-  font-size: large;
-  width: 100px;
-  transition: background-color 0.3s ease-in-out;
-
-}
-.navButtonLogin:hover{
-
-background-color: #f2b203;
-
-}
 .navItems {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1;
-  margin-left:8%;
-}
-.navItems-center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-
+  gap: 10px;
 }
 
-.navButtonCarRental-link,
-.navButtonRestaurant-link {
-  margin: 0 5px;
-}
-.navButtonCarRental,.navButtonRestaurant,.navButtonHome
-{font-weight: 600;}
-.navButtonCarRental{
+/* Buttons */
+.navButton, .navButtonCarRental, .navButtonRestaurant, .navButtonHome {
+  border-radius: 15px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  font-size: large;
   font-weight: 600;
+  transition: background-color 0.3s ease-in-out;
+}
+.navButton:hover, .navButtonCarRental:hover, .navButtonRestaurant:hover, .navButtonHome:hover {
+  background-color: #4e4e4e65;
+}
+
+.navButtonLogin {
+  margin-left: 20px;
   border-radius: 15px;
   border: none;
-  margin: 2px 2px 2px 2px ;
+  padding: 5px 10px;
   cursor: pointer;
-  color: #000000;
-  background-color: rgb(255, 255, 255);
-  
+  color: #fff;
+  background-color: black;
   font-size: large;
- 
+  width: 100px;
   transition: background-color 0.3s ease-in-out;
-  padding: 5px 10px 5px 10px ;
 }
-.navButtonCarRental:hover{
-
-  background-color: #4e4e4e65;
-  
-  }
-.navButtonRestaurant{
-  padding: 5px 10px 5px 10px ;
-  border-radius: 15px;
-  border: none;
- 
-  cursor: pointer;
-  color: #000000;
-  background-color: rgb(255, 255, 255);
-  
-  font-size: large;
-  
-  transition: background-color 0.3s ease-in-out;
-  
+.navButtonLogin:hover {
+  background-color: #f2b203;
 }
-.navButtonRestaurant:hover{
+.no-underline{
+   text-decoration: none 
+}
 
-  background-color: #4e4e4e65;
+/* Links */
+.user-nav {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.user-nav:hover {
+  color: #f2b203;
+}
 
-  
+/* Media Queries for Responsive Navbar */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .navItems {
+    gap: 5px;
   }
 
+  .navButton, .navButtonCarRental, .navButtonRestaurant, .navButtonHome, .navButtonLogin {
+    font-size: 14px;
+    padding: 4px 8px;
+    width: auto;
+  }
+}
 
-  .navButtonHome{
-    border-radius: 15px;
-    border: none;
-    padding: 5px 10px 5px 10px ;
+@media (max-width: 768px) {
+  .navItems {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Show when active */
+  .navItems.active {
+    display: flex;
+  }
+
+  /* Hamburger icon visible only on mobile */
+  .hamburger {
+    display: block;
+    font-size: 24px;
     cursor: pointer;
-    color: #000000;
-    background-color: rgb(255, 255, 255);
-    
-    font-size: large;
-    
-    transition: background-color 0.3s ease-in-out;
-    
+    margin-left: auto;
+    color: #000;
   }
-  .navButtonHome:hover{
-    
-  background-color: #4e4e4e65;
+}
 
+/* On larger screens, show menu normally and hide hamburger */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
   }
+  .navItems {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background: none;
+    box-shadow: none;
+  }
+}
