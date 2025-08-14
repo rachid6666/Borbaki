@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./register.css";
 import countries from "../../countries";
 import Navbar from "../../components/navbar/Navbar";
-
+import api from "../config";
 
 const Signup = () => {
   const { loading, error, dispatch } = useContext(AuthContext);
@@ -39,8 +39,7 @@ const Signup = () => {
     }
     dispatch({ type: "REGISTER_START" });
     try {
-      
-      const res = await axios.post("/auth/register", newUser);
+      const res = await api.post("/auth/register", newUser);
       dispatch({ type: "REGISTER_SUCCESS", payload: res.data.details });
       setSuccessMessage("Registration successful!");
     } catch (err) {
