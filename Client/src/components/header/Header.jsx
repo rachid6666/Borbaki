@@ -146,17 +146,18 @@ const Header = ({ type }) => {
                   "MM/dd/yyyy"
                 )}`}</span>
                 {openDate && (
-                  <DateRange
-                    editableDateInputs={true}
-                    onChange={(item) => setDates([item.selection])}
-                    moveRangeOnFirstSelection={false}
-                    ranges={dates}
-                    className="date"
-                    rangeColors="black"
-                    color="#000000"
-                    minDate={new Date()}
-                  />
-                )}
+                    <div className="dateContainer">
+                      <DateRange
+                        editableDateInputs={true}
+                        onChange={(item) => setDates([item.selection])}
+                        moveRangeOnFirstSelection={false}
+                        ranges={dates}
+                        className="date"
+                        rangeColors={["#000000"]}
+                        minDate={new Date()}
+                      />
+                    </div>
+                  )}
               </div>
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faPerson} className="headerIcon" />

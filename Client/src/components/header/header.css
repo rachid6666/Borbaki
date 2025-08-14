@@ -1,46 +1,41 @@
-
-
-
+/* Header Container */
 .header {
   font-size: larger;
-  color: rgb(255, 255, 255);
+  color: #fff;
   display: flex;
   justify-content: center;
   position: relative;
-
-  height:100vh;
-  
-  
- 
-
+  height: 100vh;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
+/* Inner container */
 .headerContainer {
   width: 100%;
   max-width: 1024px;
-  margin: 10px 0px 200px 0px; 
- 
-  margin-left:18%;
-  
+  margin: 10px auto 200px auto;
+  text-align: center;
 }
 
 .headerContainer.listMode {
-  margin: 20px 0px 0px 0px;
-  
+  margin: 20px auto 0 auto;
 }
 
+/* Header navigation/list */
 .headerList {
   display: flex;
-  gap: 40px;
-  margin-bottom: 50px;
-
-
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .headerListItem {
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 
 .headerListItem.active {
@@ -48,91 +43,94 @@
   padding: 10px;
   border-radius: 20px;
 }
-.headerTitle{
-  padding-top: 10%;
-  font:bolder;
+
+/* Header text */
+.headerTitle {
+  font-weight: bolder;
   font-size: 3rem;
-}
-.headerDesc {
-  margin: 20px 0px;
-  font-size: xx-large;
-  
+  padding-top: 10%;
 }
 
+.headerDesc {
+  margin: 20px 0;
+  font-size: xx-large;
+}
+
+/* Buttons */
 .headerBtn {
-  background-color: #000000; /* Adjust button color */
-  color: #fff; /* Adjust button text color */
-  padding: 10px 20px; /* Button padding */
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
   border: none;
   border-radius: 15px;
-  cursor: pointer; /* Indicate clickable behavior */
+  cursor: pointer;
   font-size: larger;
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
   width: 8rem;
   transition: background-color 0.3s ease-in-out;
-  
-
 }
-.headerBtn:hover{
+
+.headerBtn:hover {
   background-color: #f2b203;
 }
 
+/* Search bar */
 .headerSearch {
-  height: 50px;
-  background-color: rgb(255, 255, 255);
-  
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 10px 0px;
-  border-radius: 20px;
-  position: absolute;
-  bottom: 200px;
-  width: 100%;
+  width: 90%;
   max-width: 1024px;
-  z-index: 9;
- 
-  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.705);
-  
-}
-
-.headerIcon {
-  color: rgb(123, 123, 123);
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 2;
 }
 
 .headerSearchItem {
   display: flex;
   align-items: center;
   gap: 10px;
-  
+  flex: 1 1 150px;
+  min-width: 120px;
 }
 
 .headerSearchInput {
+  flex: 1;
   border: none;
   outline: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
 }
 
 .headerSearchText {
-  color: rgb(185, 185, 185);
+  color: #b9b9b9;
   cursor: pointer;
 }
 
-.date {
-  position: absolute;
-  top: 50px;
-  z-index: 2;
+.headerIcon {
+  color: #7b7b7b;
+}
 
+/* Options / Counter */
+.date {
+  position: relative;
+  z-index: 2;
 }
 
 .options {
-  z-index: 2;
   position: absolute;
   top: 50px;
-  background-color: white;
+  background-color: #fff;
   color: gray;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.4);
+  z-index: 2;
 }
 
 .optionItem {
@@ -153,7 +151,7 @@
 .optionCounterButton {
   width: 30px;
   height: 30px;
-  border: 1px solid #000000;
+  border: 1px solid #000;
   color: #f2b203;
   cursor: pointer;
   background-color: white;
@@ -164,14 +162,101 @@
   cursor: not-allowed;
 }
 
-.transparent-Background-bottom{
+/* Transparent gradient at bottom */
+.transparent-Background-bottom {
   width: 100%;
   height: 50vh;
   position: absolute;
   z-index: 1;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to bottom,rgba(255,0,0,0),rgba(0, 0, 0, 0.584));
-
-
+  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,0.584));
 }
+
+/* Mobile / tablet responsive */
+@media (max-width: 768px) {
+  .headerTitle {
+    font-size: 2rem;
+    padding-top: 15%;
+  }
+
+  .headerDesc {
+    font-size: large;
+    margin: 15px 0;
+  }
+
+  .headerSearch {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .headerSearchItem {
+    flex: 1 1 100%;
+  }
+
+  .headerBtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .headerList {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerTitle {
+    font-size: 1.5rem;
+  }
+
+  .headerDesc {
+    font-size: medium;
+  }
+
+  .headerBtn {
+    font-size: medium;
+    padding: 8px 12px;
+  }
+}
+
+/* Calendar container */
+.dateContainer {
+  position: absolute;
+  top: 50px;
+  z-index: 3;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* DateRange adjustments */
+.date {
+  border: none !important; /* remove extra borders */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .dateContainer {
+    width: 90vw; /* fit screen */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .date {
+    font-size: 0.8rem; /* smaller text */
+  }
+}
+
+@media (max-width: 480px) {
+  .dateContainer {
+    width: 95vw;
+    top: 60px;
+  }
+
+  .date {
+    font-size: 0.7rem;
+  }
+}
+

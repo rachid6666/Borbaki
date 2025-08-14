@@ -18,11 +18,13 @@ const Featured = () => {
               src="./img/alger.jpg"
               alt=""
               className="featuredImg"
+              
             />
             <div className="featuredTitles">
               <h1>ALGER</h1>
               <h2>{data[0]} Hotels </h2>
             </div>
+            
             <div className="paragprah1">
                 <p>
                 <h1>Algiers, </h1>
@@ -42,7 +44,7 @@ const Featured = () => {
           
 
           <div className="featuredItem2">
-           
+   
             <img
               src="./img/oranVille.jpg"
               alt=""
