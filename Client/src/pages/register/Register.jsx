@@ -7,6 +7,7 @@ import countries from "../../countries";
 import Navbar from "../../components/navbar/Navbar";
 import api from "../../config";
 
+
 const Signup = () => {
   const { loading, error, dispatch } = useContext(AuthContext);
   const [successMessage, setSuccessMessage] = useState("");
