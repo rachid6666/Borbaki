@@ -1,14 +1,36 @@
-.homeContainer{
+.homeContainer {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
-
+  width: 90%;           /* Use relative width */
+  max-width: 1024px;    /* Keep a max width for large screens */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;      /* Small padding for mobile */
 }
 
-.homeTitle{
-  width: 1024px;
-  font-size: 20px;
+.homeTitle {
+  width: 100%;          /* Fill container width */
+  font-size: 1.25rem;   /* Use rem for scalable text */
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;   /* Center title on small screens */
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .homeTitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .homeContainer {
+    gap: 20px;
+  }
+  .homeTitle {
+    font-size: 1rem;
+  }
 }

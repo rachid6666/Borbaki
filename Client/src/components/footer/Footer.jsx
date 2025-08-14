@@ -32,7 +32,7 @@ const Footer = () => {
         </ul>
 
       </div>
-      <div className="fText">dz-tourism</div>
+      <div className="fText">YG.Ltd</div>
     </div>
   );
 };

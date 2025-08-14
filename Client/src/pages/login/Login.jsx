@@ -33,9 +33,8 @@ const Login = () => {
   setAttempts(attempts + 1); 
     dispatch({ type: "LOGIN_START" });
     try {
-      
-      const res = await api.post("/auth/login", credentials);
-     
+        const res = await api.post("/auth/login", credentials);
+     // const res = await axios.post("/auth/login", credentials);
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
       navigate("/")
     } catch (err) {

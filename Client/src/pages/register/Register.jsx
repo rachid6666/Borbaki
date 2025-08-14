@@ -40,7 +40,8 @@ const Signup = () => {
     }
     dispatch({ type: "REGISTER_START" });
     try {
-      const res = await api.post("/auth/register", newUser);
+      
+      const res = await axios.post("/auth/register", newUser);
       dispatch({ type: "REGISTER_SUCCESS", payload: res.data.details });
       setSuccessMessage("Registration successful!");
     } catch (err) {

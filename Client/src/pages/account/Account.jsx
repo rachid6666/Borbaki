@@ -6,7 +6,6 @@ import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Siderbar";
 import axios from "axios";
 import api from "../../config";
-
 const Account = () => {
   const { user } = useContext(AuthContext);
 
@@ -58,7 +57,7 @@ const Account = () => {
 
     try {
        await api.post("/users/${user._id}", updateUser);
-     
+      //await axios.put(`/users/${user._id}`, updateUser);
     } catch (err) {
      
       if (err.response && err.response.status === 401) {

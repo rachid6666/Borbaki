@@ -21,7 +21,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navContainer">
         <Link to="/" className="no-underline">
-          <span className="logo">Dz Tourism</span>
+          <span className="logo">BorBaki</span>
         </Link>
         {user ? (
           <>
