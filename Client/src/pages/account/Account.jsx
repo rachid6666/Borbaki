@@ -5,7 +5,7 @@ import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Siderbar";
 import axios from "axios";
-import api from "../config";
+import api from "../../config";
 
 const Account = () => {
   const { user } = useContext(AuthContext);
