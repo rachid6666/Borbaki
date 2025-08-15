@@ -4,16 +4,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: red; */
   position: absolute;
-  /* z-index: 999; */
 }
 
 .listContainer {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-
 }
 
 .lsTitle {
@@ -29,17 +26,17 @@
   margin-bottom: 10px;
 }
 
-.lsItem>label {
+.lsItem > label {
   font-size: 12px;
 }
 
-.lsItem>input {
+.lsItem > input {
   height: 30px;
   border: none;
   padding: 5px;
 }
 
-.lsItem>span {
+.lsItem > span {
   height: 30px;
   padding: 5px;
   background-color: white;
@@ -48,26 +45,12 @@
   cursor: pointer;
 }
 
-
-
 .lsOptionItem {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
   color: #555;
   font-size: 12px;
-}
-
-
-
-
-
-
-.listContainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-
 }
 
 .listWrapper {
@@ -82,17 +65,11 @@
   background-color: #ffffff;
   padding: 10px;
   border-radius: 10px;
-  top: 10px;
   margin-top: 20px;
-  /* Adjusted margin */
-
   position: sticky;
   height: max-content;
   top: 90px;
 }
-
-
-
 
 .lsOptions {
   padding: 10px;
@@ -110,7 +87,7 @@
   width: 50px;
 }
 
-.listSearch>button {
+.listSearch > button {
   padding: 10px;
   background-color: #313131;
   color: white;
@@ -122,19 +99,17 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.listSearch>button:hover {
+.listSearch > button:hover {
   background-color: #000000;
 }
 
 .listResult {
   flex: 3;
   margin-top: 20px;
-
 }
 
 .desName {
   font-weight: bolder;
-
   font-size: 2rem;
 }
 
@@ -151,19 +126,79 @@
 }
 
 @keyframes l3 {
-  20% {
-    background-position: 0% 0%, 50% 50%, 100% 50%
+  20% { background-position: 0% 0%, 50% 50%, 100% 50% }
+  40% { background-position: 0% 100%, 50% 0%, 100% 50% }
+  60% { background-position: 0% 50%, 50% 100%, 100% 0% }
+  80% { background-position: 0% 50%, 50% 50%, 100% 100% }
+}
+
+/* ------------------- RESPONSIVE STYLES ------------------- */
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .listWrapper {
+    gap: 15px;
   }
 
-  40% {
-    background-position: 0% 100%, 50% 0%, 100% 50%
+  .desName {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .listContainer {
+    justify-content: center; /* center content */
+    padding: 0 10px; /* even padding */
+  }
+  .listWrapper {
+    flex-direction: column; /* stack vertically */
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    gap: 10px;
   }
 
-  60% {
-    background-position: 0% 50%, 50% 100%, 100% 0%
+  .listSearch {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    order: 1;
+    position: static; /* remove sticky on mobile */
   }
 
-  80% {
-    background-position: 0% 50%, 50% 50%, 100% 100%
+  .listResult {
+    width: 100%;
+    order: 2;
+  }
+
+  .desName {
+    font-size: 1.5rem;
+  }
+
+  .lsItem > span,
+  .sliderPrice {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .lsItem > label {
+    font-size: 14px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .desName {
+    font-size: 1.3rem;
+  }
+
+  .listSearch > button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .lsItem > span {
+    font-size: 14px;
   }
 }

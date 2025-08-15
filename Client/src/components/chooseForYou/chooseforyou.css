@@ -1,78 +1,75 @@
 .fp {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0;
-  }
-  
-  .fpItem {
-    width: calc(33.33% - 20px);
-    margin-bottom: 20px;
-  }
-  
-  .fpImg {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .fpName {
-    font-size: 22px;
-    font-weight: 700;
-    margin: 10px 0;
-  }
-  
-  .fpCity {
-    font-size: 16px;
-    color: #777;
-    margin-bottom: 10px;
-  }
-  
-  .fpPrice {
-    font-size: 18px;
-    font-weight: 700;
-    color: #f2b203;
-  }
-  
-  .fpRating {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .fpRating button {
-    background-color: #f2b203;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    margin-right: 5px;
-  }
-  
-  .fpRating span {
-    font-size: 14px;
-    color: #777;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0;
+  gap: 20px; /* add gap for cleaner spacing */
+}
 
-  
+.fpItem {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+}
 
+.fpImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px; /* optional for professional look */
+}
+
+.fpName {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.fpCity {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.fpPrice {
+  font-size: 18px;
+  font-weight: 700;
+  color: #f2b203;
+}
+
+.fpRating {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.fpRating button {
+  background-color: #f2b203;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.fpRating span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Loader and waiting */
 .watting {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: red; */
   position: absolute;
 }
 
-
-
 .loader {
   width: 60px;
-  /* margin: auto; */
   aspect-ratio: 2;
   --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
   background:
@@ -84,19 +81,40 @@
 }
 
 @keyframes l3 {
-  20% {
-    background-position: 0% 0%, 50% 50%, 100% 50%
-  }
+  20% { background-position: 0% 0%, 50% 50%, 100% 50%; }
+  40% { background-position: 0% 100%, 50% 0%, 100% 50%; }
+  60% { background-position: 0% 50%, 50% 100%, 100% 0%; }
+  80% { background-position: 0% 50%, 50% 50%, 100% 100%; }
+}
 
-  40% {
-    background-position: 0% 100%, 50% 0%, 100% 50%
-  }
+/* Responsive adjustments */
 
-  60% {
-    background-position: 0% 50%, 50% 100%, 100% 0%
+/* Tablet */
+@media (max-width: 1024px) {
+  .fpItem {
+    width: calc(50% - 15px); /* 2 columns */
   }
+}
 
-  80% {
-    background-position: 0% 50%, 50% 50%, 100% 100%
+/* Mobile */
+@media (max-width: 768px) {
+  .fpItem {
+    width: 100%; /* 1 column */
+  }
+  .fpImg {
+    height: 180px; /* slightly smaller images */
+  }
+  .fpName {
+    font-size: 20px;
+  }
+  .fpCity {
+    font-size: 14px;
+  }
+  .fpPrice {
+    font-size: 16px;
+  }
+  .fpRating button {
+    font-size: 12px;
+    padding: 4px 8px;
   }
 }

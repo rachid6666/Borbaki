@@ -24,8 +24,9 @@ const Home = () => {
         
         <ChooseForYou/>
 
-        <Footer/>
+        
       </div>
+      <Footer/>
     </div>
   );
 };

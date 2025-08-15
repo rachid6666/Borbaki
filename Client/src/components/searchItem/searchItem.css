@@ -134,3 +134,35 @@
   background-color: black;
   color: white;
 }
+@media (max-width: 768px) {
+  .searchItem {
+    flex-direction: column; /* stack image, description, and details vertically */
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .siImg {
+    width: 100%;
+    height: auto;
+  }
+
+  .siDetails {
+    width: 100%;
+    align-items: flex-start; /* price/button align left */
+  }
+
+  .siDetailTexts {
+    text-align: left;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .siPrice {
+    font-size: 20px;
+  }
+
+  .siCheckButton {
+    width: 100%; /* make button full width for mobile */
+    text-align: center;
+  }
+}

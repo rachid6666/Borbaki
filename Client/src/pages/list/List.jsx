@@ -29,7 +29,7 @@ const List = () => {
 
   return (
     <div>
-      <Navbar style='position: sticky;' />
+      <Navbar />
 
       {/* <Header type="list" /> */}
       <div className="listContainer">
